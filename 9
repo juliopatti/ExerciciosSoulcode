@@ -1,0 +1,10 @@
+#   Exercício Maior e menor valores em Tupla
+#   Crie um programa que vai gerar cinco números
+#   aleatórios e colocar em uma tupla.
+#   Depois disso, mostre a listagem de números gerados e
+#   também indique o menor e o maior valor que estão na tupla.
+
+#  OBS: admiti que os nºs aleatórios eram de 0 a 9 (inteiros)
+from random import randrange
+tupla=(randrange(10),randrange(10),randrange(10),randrange(10),randrange(10))
+print(f'A tupla de números aleatórios gerada é: {tupla}. Com máximo de {max(tupla)} e mínimo de {min(tupla)}')

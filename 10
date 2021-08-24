@@ -1,0 +1,20 @@
+# Faça um programa que verificque se um inteiro digitado pelo usuário está presente
+# dentro de um dicionário.
+# Crie o dicionário no próprio programa.
+
+from random import randrange
+c=0
+dic={}
+for i in range (0,10):              # Criei um dicionário com 10 índices: num1 até num10
+    dic[f'num{1+i}']=randrange(100) # Pra não ter que ficar digitando, criei aleatóriamente valores de 0 a 99
+print(dic) # Mostra o dicionário, caso queira ver um número pra digitar igual (isso não era pedido, usei para testar se tava funcionando)
+while True:
+    try:
+        n=int(input('\nInforme um nº inteiro para verificação se compõe o dicionário: '))
+        break
+    except:
+        print('Informe Um valor inteiro!')
+for num in dic:
+    if dic[num]==n:
+        c+=1                        # conta quantas vezes o nº digitado aparece no dicionário
+print(f'\nO nº {n} digitado aparece {c} vezes no dicionário {dic}')

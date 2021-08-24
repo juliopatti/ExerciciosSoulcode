@@ -1,0 +1,9 @@
+tupla = ('O','Palmeiras', 'nao', 'tem', 'mundial!')
+vogais=[]
+for i in range(0,len(tupla)):
+    for j in range(0,len(tupla[i])):
+        if tupla[i][j] in 'AEIOUaeiou':
+            vogais.append(tupla[i][j])
+    print(f'As vogais da palavra "{tupla[i]}" são: {vogais}')
+    vogais=[]
+    

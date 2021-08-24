@@ -1,0 +1,23 @@
+# 7) 6) Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene
+# numa lista a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0.
+
+notas = [0,0,0,0]
+notas=[notas]*10
+med=[]
+c=0
+for i in range(0,len(notas)):
+    for j in range(0,4):
+        while True:
+            try:
+                nota=float(input(f'Informe a {j+1}ª nota do {i+1}º aluno [0-10]: '))
+                if 0<=nota<=10:
+                    notas[i][j]=nota
+                    break
+                else:
+                    print('Nota invalida. Informe uma nota entre 0 e 10!')
+            except:
+                print('Entrada inválida!')
+    med.append(sum(notas[1])/len(notas[1]))
+    if med[i]>=7:
+        c+=1
+print(f'\nO nº de alunos com média >= 7 é: {c}.')

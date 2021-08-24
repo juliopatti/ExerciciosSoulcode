@@ -1,0 +1,12 @@
+# Faça um programa que leia nome e média de um aluno, guardando também a situção
+# bem um dicionário. No final,
+# mostre o conteúdo da estrutura na tela.
+
+dici={'nome': input('Informe o nome do aluno: '), 'media': float(input('Informe a média do aluno: [0-10] '))}
+if dici['media'] >=6:
+    dici['situação'] = 'aprovado'
+elif dici['media']<4:
+    dici['situação'] = 'aprovado'
+else:
+    dici['situação'] = 'reprovado'
+print(dici)

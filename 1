@@ -1,0 +1,11 @@
+#1) Faça um programa que receba 5 nºs, armezenando-os em uma lista e os apresente.
+
+lista=[]
+for i in range(0,5):
+    while True:
+        try:
+            lista.append(int(input(f"Entre com o {i+1}º nº inteiro: ")))
+            break
+        except:
+            print('Entrada Inválida! Entre com um nº inteiro:')
+print(f"\nA lista dos nºs digitados é: \n{lista}")

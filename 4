@@ -1,0 +1,26 @@
+#4) Faça um Programa que leia 20 números inteiros e armazene-os numa lista.
+# Armazene os números pares na listar PAR e os números IMPARES na lista ímpar.
+# Imprima os três vetores.
+
+lista=[]
+par=[]
+impar=[]
+for i in range(0,7):
+    while True:
+        try:
+            n=float(input((f"Entre com o {i+1}º nº inteiro: ")))
+            if n%1==0:
+                n=round(n)
+                lista.append(n)
+                if lista[i]%2==0:
+                    par.append(lista[i])
+                else:
+                    impar.append(lista[i])
+                break
+            else:
+                print('Entrada Inválida! Entre com um nº inteiro: \n')
+        except:
+            print('Entrada Inválida! Entre com um nº inteiro: \n')
+print(f"\nA lista dos nºs digitados é: \n{lista}")
+print(f"Quem podem ser agrupados nos pares: {par}")
+print(f"E podem ser agrupados nos impares: {impar}")

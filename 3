@@ -1,0 +1,15 @@
+#3) Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
+
+notas=[]
+for i in range(0,4):
+    while True:
+        try:
+            nota=float(input(f'Entre com a {i+1}ª nota:'))
+            if 0<=nota<=10:
+                notas.append(nota)
+                break
+            else:
+                print('Entrada Inválida! Entre com um valor Real entre 0 e 10: \n')
+        except:
+            print('Entrada Inválida! Entre com um valor Real entre 0 e 10: \n')
+print(f"\nA média das notas {notas} é: \n{sum(notas)/len(notas)}")
